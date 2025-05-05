@@ -1,18 +1,20 @@
-﻿✅ Definition of an Delegates in C#:
+﻿✅ Definition of an events in C#:
 
-The delegate is a reference type data type that defines the method signature. You can define variables of delegate, just like other data type, that can refer to any method with the same signature as the delegate.
+An event in C# is like a “notification system” built on top of delegates. It’s a way for one part of your program (the broadcaster) 
+to notify other parts (the listeners) when something happens.
 
-There are three steps involved while working with delegates:
+🧩 Workflow Behind Delegates and Events : 
 
-Declare a delegate
-    - Create an instance and reference a method
-    - Invoke a delegate
-    - A delegate can be declared using the delegate keyword followed by a function signature, as shown below.
+Define the Delegate: This is like setting up a contract for the type of methods that can be referenced. 
+The delegate specifies the return type and parameters of the methods it can point to.
 
+Create Methods: These are the actions you want to perform, just like creating buttons on your TV remote or setting up a fire alarm system.
 
-🧩 Syntax of an Delegates :
+Assign Methods to Delegates: You can attach the methods to the delegate, allowing the delegate to call those methods.
 
-       [access modifier] delegate [return type] [delegate name]([parameters])
+Define an Event: Events are based on delegates and act as a broadcaster. It’s like setting up a system that notifies subscribers when something happens.
 
+Subscribe to the Event: Other parts of the program subscribe to the event, just like how different responders (fire department, management, occupants) 
+are prepared to react to the fire alarm.
 
-Link for more ressources : https://www.tutorialsteacher.com/csharp/csharp-delegates 
+Trigger the Event: When the event occurs (like a fire is detected), all the subscribed methods are called automatically.
