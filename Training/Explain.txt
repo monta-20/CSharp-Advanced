@@ -13,3 +13,6 @@ Declare a delegate
 🧩 Syntax of an Delegates :
 
        [access modifier] delegate [return type] [delegate name]([parameters])
+
+
+Link for more ressources : https://www.tutorialsteacher.com/csharp/csharp-delegates 
