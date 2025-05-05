@@ -1,26 +1,38 @@
 ﻿using System;
-using Training;
 
-namespace Monta; 
-
-class Program
+public class Program
 {
-    static void Main(string[] args)
-    {   //First Use
-        int percentage = -10;
-        if (percentage.IsBetween(0, 100))
-            Console.WriteLine("Percentage is valid");
-        else
-            Console.WriteLine("Invalid percentage");
-        //Second Use
-        var user = new User
+    // Déclaration d'un delegate
+    public delegate double Operation(double a, double b);
+
+    // Méthodes d'opération
+    public static double Add(double x, double y) => x + y;
+    public static double Subtract(double x, double y) => x - y;
+    public static double Multiply(double x, double y) => x * y;
+    public static double Divide(double x, double y) => y != 0 ? x / y : throw new DivideByZeroException();
+
+    // Méthode qui utilise le delegate
+    public static void ExecuteOperation(double a, double b, Operation operation, string opName)
+    {
+        try
         {
-            FirstName = "Montassar",
-            LastName = "Ben Brahim"
-        };
+            double result = operation(a, b);
+            Console.WriteLine($"{opName} of {a} and {b} = {result}");
+        }
+        catch (Exception ex)
+        {
+            Console.WriteLine($"{opName} failed: {ex.Message}");
+        }
+    }
 
-        string fullName = user.GetFullName();
-        Console.WriteLine(fullName);
+    public static void Main()
+    {
+        double num1 = 10;
+        double num2 = 5;
 
+        ExecuteOperation(num1, num2, Add, "Addition");
+        ExecuteOperation(num1, num2, Subtract, "Subtraction");
+        ExecuteOperation(num1, num2, Multiply, "Multiplication");
+        ExecuteOperation(num1, num2, Divide, "Division");
     }
 }

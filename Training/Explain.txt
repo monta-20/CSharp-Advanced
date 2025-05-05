@@ -1,26 +1,15 @@
-﻿✅ Definition of an Extension Method in C#:
+﻿✅ Definition of an Delegates in C#:
 
-An extension method is a static method defined in a static class that allows you to "add" methods to existing types
-without modifying their source code or creating a derived type.
+The delegate is a reference type data type that defines the method signature. You can define variables of delegate, just like other data type, that can refer to any method with the same signature as the delegate.
 
-   It’s commonly used to enhance built-in types (like string, int, List<T>) or your own classes with new methods.
+There are three steps involved while working with delegates:
 
-
-🧩 Syntax of an Extension Method:
-
-public static class ExtensionClassName
-{
-    public static ReturnType MethodName(this TargetType instance, other_parameters)
-    {
-        // Method logic
-    }
-}
+Declare a delegate
+    - Create an instance and reference a method
+    - Invoke a delegate
+    - A delegate can be declared using the delegate keyword followed by a function signature, as shown below.
 
 
-🔍 Explanation:
-Element	                                Description
+🧩 Syntax of an Delegates :
 
-public static class	           The class that holds the extension methods
-static	                       The method must be static
-this TargetType instance	   The first parameter defines the type being extended
-ReturnType	                   Return type of the method
+       [access modifier] delegate [return type] [delegate name]([parameters])
