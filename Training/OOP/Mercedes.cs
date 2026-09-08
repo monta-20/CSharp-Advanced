@@ -3,9 +3,9 @@
     public class Mercedes : Car
     {
         public Mercedes() : base() { }
-        public override void Start()
+        public void Model()
         {
-            Console.WriteLine("Mercedes is starting");
+            Console.WriteLine($"Mercedes model: {Name} in year {Years}");
         }
     }
 }

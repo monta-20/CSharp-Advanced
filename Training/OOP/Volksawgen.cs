@@ -2,9 +2,9 @@
 {
     public class Volksawgen : Car
     {
-        public override void Start()
+        public void Model()
         {
-            Console.WriteLine("Volksawgen is starting");
+            Console.WriteLine($"Volksawgen model: {Name} in year {Years}");
         }
     }
 }

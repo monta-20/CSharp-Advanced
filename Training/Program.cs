@@ -8,17 +8,13 @@ class Program
 {
     static void Main(string[] args)
     {
-        Car mercedes = new Mercedes
+        List<Car> cars = new List<Car>
         {
-            Name = "Mercedes-Benz",
-            Years = DateOnly.FromDateTime(new DateTime(2023, 1, 1)),
+            new Mercedes { Name = "Mercedes A-Class", Years = new DateOnly(2020, 1, 1) },
+            new Volksawgen { Name = "Volksawgen Golf", Years = new DateOnly(2019, 1, 1) },
+            new Mercedes { Name = "Mercedes C-Class", Years = new DateOnly(2021, 1, 1) },
+            new Volksawgen { Name = "Volksawgen Passat", Years = new DateOnly(2018, 1, 1) }
         };
-        Car volkswagen = new Volksawgen
-        {
-            Name = "Volkswagen",
-            Years = DateOnly.FromDateTime(new DateTime(2023, 1, 2)),
-        };
-        mercedes.Start();
-        volkswagen.Start();
+        cars.Sort();
     }
 }

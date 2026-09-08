@@ -1,12 +1,14 @@
 ﻿namespace Training.OOP
 {
-    public class Car
+    public class Car :IComparable<Car>
     {
        public string Name { get; set; }
        public DateOnly Years { get; set; }
-       public virtual void Start()
+        
+       public int CompareTo(Car? other)
        {
-            Console.WriteLine("Car is starting");
+           if (other == null) return 1;
+           return Years.CompareTo(other.Years);
        }
     }
 }
