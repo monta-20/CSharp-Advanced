@@ -1,26 +1,18 @@
 ﻿using System;
 using Training;
+using Training.OOP;
 
 namespace Monta; 
 
 class Program
 {
     static void Main(string[] args)
-    {   //First Use
-        int percentage = -10;
-        if (percentage.IsBetween(0, 100))
-            Console.WriteLine("Percentage is valid");
-        else
-            Console.WriteLine("Invalid percentage");
-        //Second Use
-        var user = new User
+    {
+        Mercedes mercedes = new Mercedes
         {
-            FirstName = "Montassar",
-            LastName = "Ben Brahim"
+            Name = "Mercedes-Benz",
+            Years = DateOnly.FromDateTime(new DateTime(2023, 1, 1)),
         };
-
-        string fullName = user.GetFullName();
-        Console.WriteLine(fullName);
-
+        mercedes.Start();
     }
 }

@@ -1,26 +1,8 @@
-﻿✅ Definition of an Extension Method in C#:
+﻿OOP : 
+class , instance
+inheritance
+encapsulation
+polymorphism
+abstarct 
+virtual and override methods 
 
-An extension method is a static method defined in a static class that allows you to "add" methods to existing types
-without modifying their source code or creating a derived type.
-
-   It’s commonly used to enhance built-in types (like string, int, List<T>) or your own classes with new methods.
-
-
-🧩 Syntax of an Extension Method:
-
-public static class ExtensionClassName
-{
-    public static ReturnType MethodName(this TargetType instance, other_parameters)
-    {
-        // Method logic
-    }
-}
-
-
-🔍 Explanation:
-Element	                                Description
-
-public static class	           The class that holds the extension methods
-static	                       The method must be static
-this TargetType instance	   The first parameter defines the type being extended
-ReturnType	                   Return type of the method
