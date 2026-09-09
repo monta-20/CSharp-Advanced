@@ -1,8 +1,4 @@
 ﻿OOP : 
-class , instance
-inheritance
-encapsulation
-polymorphism
-abstarct 
-virtual and override methods 
+Generic 
+
 
